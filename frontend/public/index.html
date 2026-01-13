@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Traffic Risk Predictor</title>
+  <title>Safe Route AI | Traffic Risk Predictor</title>
   <link rel="stylesheet" href="../src/css/style.css" />
 </head>
 <body>
@@ -11,7 +11,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-left">
-      <img src="../assets/images/logo.jpeg" alt="Logo" class="logo" height="50px" width="50px"/>
+      <img src="../assets/images/logo.jpeg" alt="Logo" class="logo"/>
       <span class="project-name">Safe Route AI</span>
     </div>
 
@@ -24,42 +24,36 @@
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>
         🔴 Live Traffic Risk Prediction  
         <span>for Smart Cities</span>
       </h1>
-
-      <p>
-        Predict congestion & accident risk before you travel
-      </p>
+      <p>Predict congestion & accident risk before you travel</p>
 
       <div class="hero-buttons">
         <a href="#dashboard" class="btn primary">Check Risk Now</a>
         <a href="#map" class="btn secondary">View Map</a>
       </div>
+
+      <div class="api-status" id="apiStatus">
+        🔄 Connecting to live data...
+      </div>
     </div>
   </section>
 
-  <!-- TRAFFIC INSIGHT SECTION -->
+  <!-- DASHBOARD -->
   <section class="insight-section" id="dashboard">
-    <h2 class="section-title">
-      🚦 Traffic Congestion & Accident Risk
-    </h2>
-
-    <p class="section-subtitle">
-      AI predicts jam level and accident danger in real-time
-    </p>
+    <h2 class="section-title">🚦 Live Traffic Insights</h2>
+    <p class="section-subtitle">AI-powered real-time prediction</p>
 
     <div class="insight-cards">
 
-      <!-- Congestion Card -->
       <div class="insight-card">
-        <h3>🚦 Traffic Congestion</h3>
-        <p>AI predicts jam level</p>
-
+        <h3>🚦 Congestion</h3>
+        <p>Jam Level</p>
         <div class="levels">
           <span class="level low">Low</span>
           <span class="level medium">Medium</span>
@@ -67,22 +61,18 @@
         </div>
       </div>
 
-      <!-- Accident Risk Card -->
       <div class="insight-card">
         <h3>⚠ Accident Risk</h3>
-        <p>AI predicts danger</p>
-
+        <p>Safety Level</p>
         <div class="levels">
           <span class="level safe">Safe</span>
           <span class="level risky">Risky</span>
         </div>
       </div>
 
-      <!-- Overall Status -->
       <div class="insight-card highlight">
         <h3>📊 Overall Status</h3>
-        <p>Live Road Safety Prediction</p>
-
+        <p>Road Condition</p>
         <div class="status">
           <span class="status-text safe-text">SAFE</span>
         </div>
@@ -91,95 +81,50 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS SECTION -->
+  <!-- MAP PLACEHOLDER -->
+  <section class="map-section" id="map">
+    <h2 class="section-title">🗺 Live Map (Coming Soon)</h2>
+    <div class="map-placeholder">
+      Google Maps + Traffic Overlay
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
   <section class="how-it-works" id="about">
     <h2 class="section-title">How It Works</h2>
-    <p class="section-subtitle">
-      From live data to real-time alerts in 4 simple steps
-    </p>
+    <p class="section-subtitle">4-step AI-powered flow</p>
 
     <div class="steps-container">
-
       <div class="step-card">
         <div class="step-icon">📥</div>
         <h3>Data Collection</h3>
-        <p>
-          Traffic sensors, GPS, cameras, and weather data are collected in real time.
-        </p>
+        <p>Sensors, cameras & GPS</p>
       </div>
 
       <div class="step-card">
         <div class="step-icon">🧠</div>
         <h3>AI Prediction</h3>
-        <p>
-          AI models predict traffic congestion and accident risk levels.
-        </p>
+        <p>ML models analyze risk</p>
       </div>
 
       <div class="step-card">
         <div class="step-icon">📊</div>
         <h3>Smart Analysis</h3>
-        <p>
-          Data is analyzed to classify risk as Low, Medium, or High.
-        </p>
+        <p>Risk classification</p>
       </div>
 
       <div class="step-card alert-card">
         <div class="step-icon">🚨</div>
         <h3>Live Alerts</h3>
-        <p>
-          Users receive alerts and safer route suggestions instantly.
-        </p>
+        <p>Instant notifications</p>
       </div>
-
-    </div>
-  </section>
-
-  <!-- WHY IT MATTERS SECTION -->
-  <section class="impact-section">
-    <h2 class="section-title">Why It Matters</h2>
-    <p class="section-subtitle">
-      Real-time traffic risk prediction saves lives and improves city response
-    </p>
-
-    <div class="impact-cards">
-
-      <div class="impact-card">
-        <div class="impact-icon">🚑</div>
-        <h3>Faster Ambulance</h3>
-        <p>
-          Emergency vehicles get safer and faster routes, reducing response time
-          and saving critical lives.
-        </p>
-      </div>
-
-      <div class="impact-card highlight-impact">
-        <div class="impact-icon">⏱</div>
-        <h3>Save Time</h3>
-        <p>
-          Predicting congestion early helps citizens avoid traffic jams and
-          reach destinations on time.
-        </p>
-      </div>
-
-      <div class="impact-card">
-        <div class="impact-icon">🚓</div>
-        <h3>Police Help</h3>
-        <p>
-          Police can proactively manage risky zones, accidents, and congestion
-          hotspots.
-        </p>
-      </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <p>
-        © 2026 <span class="footer-highlight">Team Nexora</span> | HackCrypt 2026
-      </p>
+      <p>© 2026 <span class="footer-highlight">Team Nexora</span></p>
       <p class="footer-contact">
         Contact: <a href="mailto:teamnexora@gmail.com">teamnexora@gmail.com</a>
       </p>
