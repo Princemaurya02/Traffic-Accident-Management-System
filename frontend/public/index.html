@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Safe Route AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../src/css/style.css">
+
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+
+ <div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>SafeRoute AI</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Live Map</li>
+      <li>History</li>
+      <li>Predictions</li>
+      <li>Settings</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    
+
+    <h1>🚦 Safe Route AI Dashboard</h1>
+
+    <!-- GRID CARDS -->
+    <div class="card-grid">
+      <div class="card">
+        <h2>Traffic Congestion</h2>
+        <p id="congestion">Loading...</p>
+      </div>
+
+      <div class="card">
+        <h2>Accident Risk</h2>
+        <p id="risk">Loading...</p>
+      </div>
+
+      <div class="card">
+        <h2>Overall Status</h2>
+        <span class="status-text safe-text">SAFE</span>
+      </div>
+    </div>
+
+    <!-- ALERT -->
+    <div id="alertBanner" class="alert-banner hidden">
+      ⚠ High Accident Risk Detected! Drive Carefully!
+    </div>
+
+    <!-- MAP + HISTORY SIDE BY SIDE -->
+    <div class="bottom-grid">
+      <section class="map-section">
+        <h2>Live Traffic Map</h2>
+        <div id="map"></div>
+      </section>
+
+      <section class="history-section">
+        <h2>Live History</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </div>
+
+    <section class="chart-section">
+  <h2>Traffic Trend</h2>
+  <canvas id="trafficChart"></canvas>
+</section>
+
+
+  </main>
+
+</div>
+
+<script src="../src/js/script.js"></script>
+
+</body>
+
+</html>
